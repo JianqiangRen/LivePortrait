@@ -131,7 +131,7 @@ class LivePortraitWrapper(object):
     def get_kp_info(self, x: torch.Tensor, **kwargs) -> dict:
         """ get the implicit keypoint information
         x: Bx3xHxW, normalized to 0~1
-        flag_refine_info: whether to trandform the pose to degrees and the dimention of the reshape
+        flag_refine_info: whether to transform the pose to degrees and the dimension of the reshape
         return: A dict contains keys: 'pitch', 'yaw', 'roll', 't', 'exp', 'scale', 'kp'
         """
         with torch.no_grad(), self.inference_ctx():
